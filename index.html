@@ -4,9 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paper</title>
+    <title>RPS - Game</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rampart+One&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script src="/script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="menuContainer hidden">
+      <h1>A Simple Rock, Paper, Scissors Game</h1>
+      <img class="game_logo" src="/game_logo.png" alt="RPS_game_logo" />
+      <button class="startBtn">Start Game</button>
+    </div>
+
+    <div class="gameContainer">
+      <div class="nav">
+        <button class="menuBtn">Go Back</button>
+        <h1>Let's Play</h1>
+      </div>
+
+      <div class="scoreBoard">
+        <div class="playerScore">
+          <p>You</p>
+          <span>4</span>
+        </div>
+        <div class="computerScore">
+          <p>Computer</p>
+          <span>0</span>
+        </div>
+      </div>
+      <div class="gesturesChoices">
+        <img src="/rock.png" alt="" />
+        <img src="/paper.png" alt="" />
+        <img src="/scissors.png" alt="" />
+      </div>
+    </div>
+  </body>
 </html>

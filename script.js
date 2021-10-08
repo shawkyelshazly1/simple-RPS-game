@@ -26,38 +26,16 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let gameRounds = 5;
+let gameBtn = document.querySelector(".startBtn");
+let menuBtn = document.querySelector(".menuBtn");
+let menuContainer = document.querySelector(".menuContainer");
+let gameContainer = document.querySelector(".gameContainer");
 
-  while (gameRounds > 0) {
-    let computerSelection = computerPlay();
-    let playerSelection = null;
-    do {
-      playerSelection = prompt(
-        'Please select ["paper","rock","scissor"]'
-      ).toLowerCase();
-    } while (!options.includes(playerSelection));
+let btns = [gameBtn, menuBtn];
 
-    let roundResult = playRound(playerSelection, computerSelection);
-    if (roundResult == "c") {
-      computerScore += 1;
-    } else if (roundResult == "p") {
-      playerScore += 1;
-    }
-
-    --gameRounds;
-  }
-
-  console.log("Game Over!!!");
-  if (computerScore > playerScore) {
-    console.log(`You Lost!`);
-  } else {
-    console.log(`You Win!`);
-  }
-  console.log(
-    `Results:::   Your Score: ${playerScore}  computer Score: ${computerScore} `
-  );
-}
-
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    menuContainer.classList.toggle("hidden");
+    gameContainer.classList.toggle("hidden");
+  });
+});
