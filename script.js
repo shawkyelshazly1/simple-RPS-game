@@ -126,11 +126,11 @@ function showWinnerScreen() {
   if (playerScore == 5) {
     winnerBanner.textContent = "Congrats, You Won!";
     let image = document.querySelector(".final_image");
-    image.setAttribute("src", "/images/celebrate.png");
+    image.setAttribute("src", "images/celebrate.png");
   } else {
     winnerBanner.textContent = "I Think You Should Try Again!";
     let image = document.querySelector(".final_image");
-    image.setAttribute("src", "/images/game_over.png");
+    image.setAttribute("src", "images/game_over.png");
   }
 }
 
