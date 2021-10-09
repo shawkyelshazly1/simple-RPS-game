@@ -9,39 +9,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Rampart+One&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Rampart+One&family=Roboto&display=swap"
       rel="stylesheet"
     />
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <div class="menuContainer hidden">
+    <div class="menuContainer">
       <h1>A Simple Rock, Paper, Scissors Game</h1>
       <img class="game_logo" src="images/game_logo.png" alt="RPS_game_logo" />
       <button class="startBtn">Start Game</button>
     </div>
 
-    <div class="gameContainer">
+    <div class="gameContainer hidden">
       <div class="nav">
-        <button class="menuBtn">Go Back</button>
         <h1>Let's Play</h1>
       </div>
 
       <div class="scoreBoard">
         <div class="playerScore">
           <p>You</p>
-          <span>4</span>
+          <span class="pScore">0</span>
         </div>
         <div class="computerScore">
           <p>Computer</p>
-          <span>0</span>
+          <span class="cScore">0</span>
         </div>
       </div>
-      <div class="gesturesChoices">
-        <img src="images/rock.png" alt="" />
-        <img src="images/paper.png" alt="" />
-        <img src="images/scissors.png" alt="" />
+      <div class="resultsScreen">
+        <p class="result">... ... ...</p>
       </div>
+      <div class="gesturesChoices">
+        <img class="rock_selection selection" src="images/rock.png" alt="" />
+        <img class="paper_selection selection" src="images/paper.png" alt="" />
+        <img
+          class="scissors_selection selection"
+          src="images/scissors.png"
+          alt=""
+        />
+      </div>
+
+      <div class="movesTracking">
+        <div class="playerMoves">
+          <h3>You</h3>
+          <div class="moves pMoves"></div>
+        </div>
+        <div class="computerMoves">
+          <h3>Computer</h3>
+          <div class="moves cMoves"></div>
+        </div>
+      </div>
+    </div>
+    <div class="winnerScreen hidden">
+      <h1 class="winnerBanner">Winner Is</h1>
+      <img class="final_image" src="/images/celebrate.png" alt="" />
+      <button class="menuBtn">Main Menu</button>
     </div>
   </body>
 </html>
